@@ -59,7 +59,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <style>
+        body {
+            background: url(bg1.jpg) no-repeat center center/cover;
+        }
+        .container{
+            margin-top: 70px;
+            margin-left: 93px;
+            max-width: 777px;
+        }
+        .container h2{
+            text-align: center;
 
+        }
+        .form-group label{
+            font-weight: bold;
+            color: red;
+            /* filter: ; */
+        }
+        .form-group input,.form-group textarea{
+            background: none;
+            border: 2px solid black;
+            width: 720px;
+        }
+        .dataTables_wrapper{
+            width: 722px;
+            background: none;
+        }
+    </style>
     <title>Make-Notes</title>
 </head>
 
@@ -121,10 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </li>
 
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+           
         </div>
     </nav>
     <?php
@@ -156,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     ?>
-    <div class="container my-4">
+    <div class="container ">
         <h2>Add Notes</h2>
         <form action="index.php" method="POST">
             <div class="form-group">
